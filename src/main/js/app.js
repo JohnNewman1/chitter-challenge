@@ -22,7 +22,7 @@ class App extends React.Component {
     return (
     <div className="container">
         <Header />
-        <Peeps peeps={this.state.peeps}/>
+        <Peeps peeps={this.state.peeps.reverse()}/>
     </div>
     )
   }

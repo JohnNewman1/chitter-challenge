@@ -1,5 +1,6 @@
 import React from 'react';
-import Peep from './peep'
+import Peep from './peep';
+import AddPeep from './addpeep'
 
 const defaultProps = {
     peeps: []
@@ -18,6 +19,11 @@ class Peeps extends React.Component {
              Peeps
             </h1>
         </div>
+       </div>
+       <div className='row'>
+         <div className='col-sm-12'>
+         <AddPeep />
+         </div>
        </div>
        <div className='row'>
          <div className='col-sm-8 offset-sm-2'>

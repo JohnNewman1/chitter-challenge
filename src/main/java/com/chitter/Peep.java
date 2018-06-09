@@ -9,7 +9,7 @@ import org.hibernate.annotations.GenerationTime;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Data
 @Entity
@@ -25,7 +25,7 @@ public class Peep {
 
     @Column(name = "created_at")
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private LocalTime createdAt;
 
     protected Peep() {
     }
