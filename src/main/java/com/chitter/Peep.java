@@ -34,6 +34,10 @@ public class Peep {
         this.peep = peep;
     }
 
+    public String getPeep() {
+        return this.peep;
+    }
+
     @Override
     public String toString() {
         return String.format("Peep[id=%d, peep='%s']", id, peep);

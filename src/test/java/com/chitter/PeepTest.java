@@ -8,11 +8,11 @@ import org.junit.Test;
 
 public class PeepTest {
 
-	private Peep post = new Peep("hello");
+	private Peep peep = new Peep("hello");
 
-//	@Test
-//	public void postHasContent() {
-//		assertThat(post.getContent(), containsString("hello"));
-//	}
+	@Test
+	public void postHasContent() {
+		assertThat(peep.getPeep(), containsString("hello"));
+	}
 
 }

@@ -2,26 +2,28 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
 
-import Posts from './posts/posts';
+import Peeps from './peeps/peeps';
 import Header from './header/header'
 
 class App extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = {posts: []};
+		this.state = {peeps: []};
 	}
 
   componentDidMount() {
     client({method: 'GET', path: '/api/peeps'}).then(response => {
-      this.setState({posts: response.entity._embedded.peeps});
+      this.setState({peeps: response.entity._embedded.peeps});
     });
   }
 
   render() {
-    return (<div>
-       <Header />
-      <Posts posts={this.state.posts}/></div>
+    return (
+    <div className="container">
+        <Header />
+        <Peeps peeps={this.state.peeps}/>
+    </div>
     )
   }
 }
