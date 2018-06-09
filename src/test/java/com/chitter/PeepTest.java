@@ -1,14 +1,14 @@
-package com.millieandco.acebook;
+package com.chitter;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
 
-import com.millieandco.acebook.Post;
+import com.chitter.Peep;
 import org.junit.Test;
 
-public class PostTest {
+public class PeepTest {
 
-	private Post post = new Post("hello");
+	private Peep post = new Peep("hello");
 
 //	@Test
 //	public void postHasContent() {

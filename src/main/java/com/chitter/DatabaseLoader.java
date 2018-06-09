@@ -1,17 +1,16 @@
-package com.millieandco.acebook;
+package com.chitter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 
-  private final PostRepository repository;
+  private final PeepRepository repository;
 
   @Autowired
-  public DatabaseLoader(PostRepository repository) {
+  public DatabaseLoader(PeepRepository repository) {
   	this.repository = repository;
   }
 
@@ -19,7 +18,7 @@ public class DatabaseLoader implements CommandLineRunner {
   @Override
   public void run(String... strings) throws Exception {
     this.repository.deleteAll();
-    this.repository.save(new Post("Hey, folks! Welcome to Acebook!"));
-    this.repository.save(new Post("yo"));
+    this.repository.save(new Peep("Hey, folks! Welcome to Acebook!"));
+    this.repository.save(new Peep("yo"));
   }
 }
