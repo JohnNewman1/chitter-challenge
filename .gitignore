@@ -1,2 +1,9 @@
 /**/.DS_Store
-/coverage
+/target
+.idea/
+/node_modules
+dependency-reduced-pom.xml
+*.iml
+/tests_output
+selenium-debug.log
+.DS_Store
